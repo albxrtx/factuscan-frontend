@@ -22,7 +22,6 @@ function ExampleInvoice({ title, file, setInvoices }) {
 
       const response = await fetch(
         "https://factuscan-backend.onrender.com/upload",
-        // "http://127.0.0.1:8000/upload",
         {
           method: "POST",
           body: formData,

@@ -3,8 +3,8 @@ import ExampleInvoice from "../ExampleInvoice";
 
 function FormSection({ setInvoices }) {
   const demoInvoices = [
-    { title: "Factura Teleco", file: "/public/factura_1.pdf" },
-    { title: "Factura Mecánico", file: "/public/factura_2.pdf" },
+    { title: "Factura Teleco", file: "/factura_1.pdf" },
+    { title: "Factura Mecánico", file: "/factura_2.pdf" },
   ];
 
   const [loading, setLoading] = useState(false);
@@ -34,7 +34,6 @@ function FormSection({ setInvoices }) {
     try {
       const response = await fetch(
         "https://factuscan-backend.onrender.com/upload",
-        // "http://127.0.0.1:8000/upload",
         {
           method: "POST",
           body: formData,
